@@ -1,0 +1,23 @@
+.footer {
+  background-color: var(--color-dark-royal-blue);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.link {
+  color: var(--color-white);
+  text-decoration: none;
+  display: block;
+  width: min-content;
+  margin: auto;
+}
+
+.link:hover {
+  scale: 1.1;
+  color: var(--color-lime-green);
+}

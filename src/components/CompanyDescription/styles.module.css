@@ -1,0 +1,236 @@
+.companyDescription {
+  scroll-margin-top: 7.5rem;
+}
+
+.containerAboutUs,
+.containerOurMission {
+  display: flex;
+  margin-top: 4rem;
+  overflow: hidden;
+}
+
+.containerAboutUsText,
+.containerOurMissionText {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+}
+
+.title {
+  color: var(--color-lime-green);
+  font-size: 4rem;
+  opacity: 0;
+  position: absolute;
+  text-shadow: 2px 2px 0 var(--color-deep-forest);
+  top: 3rem;
+  transform: translateX(-50px);
+  transition:
+    opacity 1.9s ease,
+    transform 1.9s ease;
+}
+
+.aboutUsText,
+.ourMissionText {
+  background-color: var(--color-dark-royal-blue);
+  border-radius: 1rem;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: auto;
+  opacity: 0;
+  padding: 2rem;
+  transition:
+    opacity 1.9s ease,
+    transform 1.9s ease;
+  width: 80%;
+}
+
+.aboutUsText {
+  transform: translateX(-50px);
+}
+
+.ourMissionText {
+  margin-top: 0rem;
+  transform: translateX(150px);
+}
+
+.containerAboutUsImg,
+.containerOurMissionImg {
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+
+.aboutUsImg,
+.ourMissionImg {
+  border-radius: 1rem;
+  height: 35rem;
+  margin: auto;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition:
+    opacity 1.9s ease,
+    transform 1.9s ease;
+  width: 80%;
+}
+
+.aboutUsImg {
+  transform: translateX(50px);
+}
+
+.ourMissionImg {
+  transform: translateX(150px);
+}
+
+.subtitle {
+  color: var(--color-dark-royal-blue);
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  opacity: 0;
+  transform: translateX(150px);
+  transition:
+    opacity 1.9s ease,
+    transform 1.9s ease;
+}
+
+.subtitleOurMission {
+  margin-inline: auto;
+  margin-top: 8rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  margin-left: 5.3rem;
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.5rem;
+}
+
+.vision,
+.values,
+.differences {
+  margin-top: 3rem;
+}
+
+@media (max-width: 1025px) {
+  .title {
+    top: 0;
+  }
+
+  .aboutUsImg,
+  .ourMissionImg {
+    height: 29rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .companyDescription {
+    scroll-margin-top: 6.5rem;
+  }
+
+  .containerAboutUs {
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  .title {
+    position: relative;
+  }
+
+  .containerAboutUsText,
+  .containerOurMissionText {
+    width: 100%;
+  }
+
+  .containerAboutUsImg,
+  .containerOurMissionImg {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .aboutUsText {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .aboutUsImg,
+  .ourMissionImg {
+    height: 30rem;
+    width: 80%;
+  }
+
+  .containerOurMission {
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+  }
+
+  .subtitle {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ourMissionText {
+    margin: 2rem auto;
+    width: 80%;
+  }
+
+  .vision,
+  .values,
+  .differences {
+    margin-top: 2rem;
+  }
+
+  ul {
+    margin-left: 6rem;
+  }
+
+  li {
+    width: 85%;
+  }
+}
+
+@media (max-width: 490px) {
+  .companyDescription {
+    scroll-margin-top: 5rem;
+  }
+
+  .containerAboutUsText {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .aboutUsImg,
+  .ourMissionImg {
+    height: 19.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  li {
+    font-weight: bold;
+    margin: 1rem auto 0;
+    width: 75%;
+    padding-bottom: 0.5rem;
+  }
+}
