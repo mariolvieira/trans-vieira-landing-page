@@ -38,6 +38,7 @@ body {
   --color-petrol-blue: #0f6b82;
   --color-silver: #ccc;
   --color-white: #ffffff;
+  --color-amber: #ffbb00;
 }
 
 ::-webkit-scrollbar {

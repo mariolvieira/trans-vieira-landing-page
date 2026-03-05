@@ -89,16 +89,6 @@ export default function Home() {
           &#10095;
         </button>
       </div>
-
-      <div className={styles.indicators}>
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.point} ${index === currentIndex ? styles.active : ""}`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
     </div>
   );
 }
