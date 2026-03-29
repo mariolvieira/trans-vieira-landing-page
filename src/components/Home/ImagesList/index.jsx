@@ -8,22 +8,17 @@ import bus5 from "../../../assets/bus5.jpg";
 export const images = [
   {
     url: bus1,
-    index: 0,
   },
   {
     url: bus2,
-    index: 1,
   },
   {
     url: bus3,
-    index: 2,
   },
   {
     url: bus4,
-    index: 3,
   },
   {
     url: bus5,
-    index: 4,
   },
 ];

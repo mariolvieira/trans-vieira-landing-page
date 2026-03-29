@@ -1,6 +1,31 @@
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
 export default function Contact({ toAppear }) {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [usersMessages, setUsersMessages] = useState([]);
+  const [sent, setSent] = useState(false);
+
+  useEffect(() => {
+    console.table("Mensagens enviadas:", usersMessages);
+  }, [usersMessages]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const newUserMessage = { fullName, email, message };
+    setUsersMessages([...usersMessages, newUserMessage]);
+
+    setSent(true);
+
+    setTimeout(() => setSent(false), 3000);
+
+    setFullName("");
+    setEmail("");
+    setMessage("");
+  }
+
   return (
     <section id="contact" className={`${styles.contact} ${toAppear}`}>
       <h2 className={styles.title}>Contato</h2>
@@ -47,7 +72,7 @@ export default function Contact({ toAppear }) {
         </a>
       </nav>
       <h4 className={styles.subtitle}>Envie uma mensagem</h4>
-      <form className={styles.contactForm}>
+      <form className={styles.contactForm} onSubmit={handleSubmit}>
         <label className={styles.label} htmlFor="fullName">
           Nome Completo
         </label>
@@ -56,6 +81,8 @@ export default function Contact({ toAppear }) {
           type="text"
           id="fullName"
           placeholder="Nome Completo"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
           required
         />
         <label className={styles.label} htmlFor="email">
@@ -66,6 +93,8 @@ export default function Contact({ toAppear }) {
           type="email"
           id="email"
           placeholder="Email: email@exemplo.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <label className={styles.label} htmlFor="message">
@@ -75,8 +104,13 @@ export default function Contact({ toAppear }) {
           id="message"
           className={styles.textarea}
           placeholder="Sua mensagem"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           required
         ></textarea>
+        {sent && (
+          <p className={styles.message}>Mensagem enviada com sucesso.</p>
+        )}
         <button className={styles.buttonToSend} type="submit">
           Enviar
         </button>

@@ -131,6 +131,16 @@
   outline: none;
 }
 
+.message {
+  color: var(--color-dark-royal-blue);
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 0.4rem;
+  background-color: var(--color-lime-green);
+}
+
 .buttonToSend {
   background-color: var(--color-ocean-blue);
   border: none;
