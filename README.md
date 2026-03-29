@@ -23,3 +23,14 @@ Flexibilidade de Colunas: Seções "Sobre Nós" e "Nossa Missão" passam para fl
 Animações de Scroll com Intersection Observer
 
 Em vez de sobrecarregar o navegador com eventos de scroll comuns, utilizei a API Intersection Observer no App.jsx. As classes de animação (slideInLeftActive, toAppearActive e slideInRightActive) só são injetadas quando o componente entra no campo de visão do usuário. Garante que o site pareça "vivo" enquanto o usuário navega, mantendo uma performance de 60 FPS.
+
+Formulário de Contato Inteligente: 
+
+  Implementei a gestão de formulários utilizando Controlled Components (useState).
+  Validação Simples: Uso de atributos nativos para garantir que e-mail e nome sejam preenchidos.
+  Feedback Instantâneo: Sistema de notificação de sucesso que aparece dinamicamente após o envio, melhorando a experiência do usuário (UX).
+  Limpeza Automática: Lógica para resetar os campos do formulário após a submissão bem-sucedida.
+
+Monitoramento de Dados: 
+  
+  Persistência Volátil (Simulação): As mensagens enviadas são capturadas em um estado de array e exibidas de forma organizada no console do navegador (console.table), simulando como os dados seriam estruturados antes de serem enviados para um banco de dados (Backend).  
